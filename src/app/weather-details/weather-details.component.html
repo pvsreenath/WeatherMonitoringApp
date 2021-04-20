@@ -1,6 +1,6 @@
 <div class="container text-primary">
-    <h1>{{details.name}}</h1>
-    <div class="row">
+    <h1 class="ml-5 mb-2">{{details.name}}</h1>
+    <div class="row border shadow pt-2 ml-5 mb-2"style="background-color: rgb(241, 175, 241); border-radius:10px; width:85% ">
         <img src="https://openweathermap.org/img/wn/{{details.weather[0].icon}}@2x.png " width="100px" height="100px">
         <div class="col-9">
             
@@ -11,10 +11,10 @@
         </div>
 
     </div><br><br>
-    <h3>Forcasting details:</h3>
+    <h3 class="ml-5 mb-5">Forcasting details:</h3>
     <div class="row" >
         
-        <div class="box col-md-3 col-12 border shadow ml-2 mb-3 " style="border-radius: 10px;" *ngFor="let detail of forcasting" >
+        <div class="box col-md-3 col-12 border shadow ml-5 mb-5 mb-3" style="background-color: rgb(241, 175, 241);border-radius: 10px;" *ngFor="let detail of forcasting" >
             <img src="https://openweathermap.org/img/wn/{{detail.weather[0].icon}}@2x.png " width="100px" height="100px">
             <p class="text-danger"><b class="text-primary">Date: </b>{{detail.dt_txt}}</p>
             <p class="text-danger"><b class="text-primary">TEMPERATURE: </b>{{detail.main.temp}}</p>

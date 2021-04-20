@@ -7,11 +7,14 @@ img{
 }
 .mycard{
    
-    width:30%;
-    margin-left: 23%;
+    width:52%;
+    margin-left: 24%;
 }
 .mybutton3{
     border-radius: 4px;
-    width: 350px;
+    width: 52%;
     height: 40px;
+    margin-left: 24%;
+    /* background-color: rgb(121, 178, 231); */
 }
+

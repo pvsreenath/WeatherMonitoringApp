@@ -13,8 +13,8 @@
         <button class="btn-primary mybutton col-md-3 col-12 ml-1" (click)="onSelect2(location2.value)">weather Details</button>
     </div>
    
-    <div class="mycard">
-        <img class="card-img-top border shadow" src="https://openweathermap.org/img/wn/{{details.weather[0].icon}}@2x.png " width="100px" height="200px">
+    <div class="mycard border shadow  mt-2 mb-2"  style="background-color: rgb(241, 175, 241); border-radius: 10px;">
+        <img class="card-img-top " src="https://openweathermap.org/img/wn/{{details.weather[0].icon}}@2x.png " width="100px" height="300px">
         <div class="card-body">
             <p class="text-danger"><b class="text-primary">TEMPERATURE: </b>{{details.main.temp}}</p>
             <p class="text-danger"><b class="text-primary">WEATHER DESCRIPTION: </b>{{details.weather[0].description}}</p>
@@ -22,6 +22,6 @@
             <p class="text-danger"><b class="text-primary">PRESSURE: </b>{{details.main.pressure}}</p>
         </div>
     </div>
-    <button class="btn-primary  mybutton3" (click)="onClick()"> Settings</button>
+    <button class="btn-primary mybutton3 " (click)="onClick()"> Settings</button>
  
 </div>
