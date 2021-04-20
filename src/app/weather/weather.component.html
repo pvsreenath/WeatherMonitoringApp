@@ -1,6 +1,6 @@
 <div class="container">
     <h1 class="bg-primary text-white text-center">WEATHER MONITORING</h1>
-    <h1 class="text-primary">{{details.location.name}}</h1><br>
+    <h1 class="text-primary">{{details.name}}</h1><br>
     <div class="row">
         <h4 class="col-3">Select Location:</h4>
         <select #location id="mySelect"  (change)="onSelect(location.value)" class="form-control col-3"></select>
@@ -14,15 +14,13 @@
     </div>
    
     <div class="mycard">
-        <img class="card-img-top" src="{{details.current.weather_icons[0]}}" width="100px" height="200px">
+        <img class="card-img-top border shadow" src="https://openweathermap.org/img/wn/{{details.weather[0].icon}}@2x.png " width="100px" height="200px">
         <div class="card-body">
-            <p class="text-danger"><b class="text-primary">Temperature: </b>{{details.current.temperature}}</p>
-            <p class="text-danger"><b class="text-primary">WEATHER DESCRIPTION:
-                </b>{{details.current.weather_descriptions[0]}}</p>
-            <p class="text-danger"><b class="text-primary">HUMIDITY: </b>{{details.current.humidity}}</p>
-            <p class="text-danger"><b class="text-primary">PRESSURE: </b>{{details.current.pressure}}</p>
+            <p class="text-danger"><b class="text-primary">TEMPERATURE: </b>{{details.main.temp}}</p>
+            <p class="text-danger"><b class="text-primary">WEATHER DESCRIPTION: </b>{{details.weather[0].description}}</p>
+            <p class="text-danger"><b class="text-primary">HUMIDITY: </b>{{details.main.humidity}}</p>
+            <p class="text-danger"><b class="text-primary">PRESSURE: </b>{{details.main.pressure}}</p>
         </div>
-
     </div>
     <button class="btn-primary  mybutton3" (click)="onClick()"> Settings</button>
  

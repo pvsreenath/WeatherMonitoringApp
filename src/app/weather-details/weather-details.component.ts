@@ -21,6 +21,7 @@ export class WeatherDetailsComponent implements OnInit {
       console.log(this.location)
       this.dataService.getWeatherDetails(this.location).subscribe(data=>{
         this.details=data
+        console.log(this.details)
       })
      this.units=this.dataService.getUnits();
      console.log(this.units)
