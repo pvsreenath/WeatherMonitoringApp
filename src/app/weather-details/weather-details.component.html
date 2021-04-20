@@ -13,7 +13,7 @@
     <h3>Forcasting details:</h3>
     <div class="row" >
         
-        <div class="box col-4" *ngFor="let detail of forcasting" >
+        <div class="box col-md-3 col-12 border shadow ml-2 mb-3 " style="border-radius: 10px;" *ngFor="let detail of forcasting" >
             <img src="http://openweathermap.org/img/wn/{{detail.weather[0].icon}}@2x.png " width="100px" height="100px">
             <p class="text-danger"><b class="text-primary">Date: </b>{{detail.dt_txt}}</p>
             <p class="text-danger"><b class="text-primary">TEMPERATURE: </b>{{detail.main.temp}}</p>
