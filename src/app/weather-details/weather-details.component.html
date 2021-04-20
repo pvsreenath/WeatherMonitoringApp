@@ -1,0 +1,28 @@
+<div class="container text-primary">
+    <h1>{{details.location.name}}</h1>
+    <div class="row">
+        <img class="col-3" src="{{details.current.weather_icons[0]}}" width="200px" height="200px">
+        <div class="col-9">
+            <p class="text-danger"><b class="text-primary">TEMPERATURE: </b>{{details.current.temperature}}</p>
+            <p class="text-danger"><b class="text-primary">WEATHER DESCRIPTION: </b>{{details.current.weather_descriptions[0]}}</p>
+            <p class="text-danger"><b class="text-primary">HUMIDITY: </b>{{details.current.humidity}}</p>
+            <p class="text-danger"><b class="text-primary">PRESSURE: </b>{{details.current.pressure}}</p>
+        </div>
+
+    </div><br><br>
+    <h3>Forcasting details:</h3>
+    <div class="row" >
+        
+        <div class="box col-4" *ngFor="let detail of forcasting" >
+            <img src="http://openweathermap.org/img/wn/{{detail.weather[0].icon}}@2x.png " width="100px" height="100px">
+            <p class="text-danger"><b class="text-primary">Date: </b>{{detail.dt_txt}}</p>
+            <p class="text-danger"><b class="text-primary">TEMPERATURE: </b>{{detail.main.temp}}</p>
+            <p class="text-danger"><b class="text-primary">WEATHER DESCRIPTION: </b>{{detail.weather[0].description}}</p>
+            <p class="text-danger"><b class="text-primary">HUMIDITY: </b>{{detail.main.humidity}}</p>
+            <p class="text-danger"><b class="text-primary">PRESSURE: </b>{{detail.main.pressure}}</p>
+            
+        </div> 
+         
+    </div>
+
+</div>
