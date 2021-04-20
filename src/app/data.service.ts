@@ -16,7 +16,7 @@ export class DataService {
 
   // http://api.openweathermap.org/data/2.5/weather?q=Bangalore&appid=1dc257a3c1ded5373f16aef5d1c8a563
   getWeatherDetails(city:any):Observable<object>{
-    var _url = "http://api.weatherstack.com/current?access_key=b30278124a8bd6a71bd0ef25f74f257d&query="+city
+    var _url = "https://api.weatherstack.com/current?access_key=b30278124a8bd6a71bd0ef25f74f257d&query="+city
     return  this.http.get(_url);
   }
   getForcatingDetails(city:any,unit:any){
